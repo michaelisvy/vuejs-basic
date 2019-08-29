@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{message1}}</p>
+        <button v-on:click="reverseMessage">Reverse message</button>
+        <p>
+            <span v-bind:title="message2">
+                Hover your mouse over me for a few seconds
+                to see my dynamically bound title!
+            </span>
+        </p>
+        <span v-if="seen">Now you see me</span>
+        <ol>
+            <li v-for="todo in todos">
+                {{ todo.text }}
+            </li>
+        </ol>
+        <ol>
+            <!-- Create an instance of the todo-item component -->
+            <todo-item></todo-item>
+        </ol>
+    </div>
+    <script src="./util.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
